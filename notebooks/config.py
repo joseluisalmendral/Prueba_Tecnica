@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import joblib
+import datetime
 
 # Visualizaciones
 # -----------------------------------------------------------------------
@@ -54,6 +55,10 @@ import nltk
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+# Llamadas HTTP/HTTPS
+# -----------------------------------------------------------------------
+import requests
 
 
 # Gestionar los warnings
