@@ -1,4 +1,4 @@
-# Proyecto 2. CinemAnalytics: Explorando el Cine a través de Datos y Tecnología
+# CinemAnalytics: Explorando el Cine a través de Datos y Tecnología
 
 ## 1. Resumen
 
@@ -14,75 +14,31 @@ Nos ha contratado una plataforma de streaming para mejorar la calidad de su cont
 
 ## 2. Fases del Proyecto
 
-### Fase 1: Extracción de Datos de API de MoviesDataset
-En esta fase se utilizará la API de MoviesDataset para extraer información relevante sobre películas y cortometrajes.
+### [Desglose de las fases y Requerimientos](https://github.com/DataScienceOct24/project_z)
+<br>
 
-**Requerimientos:**
-- Películas desde 1990 hasta la actualidad.
-- Géneros: Drama, Comedy, Action, Fantasy, Horror, Mystery, Romance, Thriller.
-- Información necesaria:
-  - Tipo (corto o película).
-  - Nombre.
-  - Año y mes de estreno.
-  - ID de la película.
 
-**Nota:** Los datos extraídos deberán almacenarse en una lista de tuplas.
+## 3. Conclusiones
 
----
+Tras extraer datos mediante apis y web scraping las cuales se pueden [ver en mis notebooks](https://github.com/joseluisalmendral/Prueba_Tecnica/tree/master/notebooks), he tratado y vectorizado los datos para realiar un sistema de recomendación basado en contenido.
 
-### Fase 2: Extracción de Detalles de Películas con Selenium
-Utiliza Selenium para obtener información adicional de las películas listadas previamente.
+Ejemplos: 
 
-**Información requerida:**
-- Calificación de IMDB.
-- Dirección (director o directores).
-- Guionistas.
-- Argumento.
-- Duración (en minutos).
+![don_quijote_similar_films](utils/pinocho_similar_films.png)
+![don_quijote_similar_films](utils/don_quijote_similar_films.png)
 
-**Nota:** Los datos obtenidos deberán almacenarse en una lista de tuplas.
+#### *Ha quedado pendiente* la creación de la base de datos mediante código por falta de tiempo.
 
----
+ Pero he realizado un esquema de la estructura que tendría en base a mis datos.
 
-### Fase 3: Extracción de Detalles de Actores con Selenium
-Obtén información sobre los 10 actores principales de cada película o corto utilizando Selenium.
+![db_structure](utils/db_structure.png)
 
-**Información requerida:**
-- Nombre.
-- Año de nacimiento.
-- Por qué es conocido.
-- Roles (actuación, dirección, etc.).
-- Premios.
 
-**Nota:** La información deberá almacenarse en una lista de tuplas.
 
----
+## 4. Next Steps
 
-### Fase 4: Creación de un Sistema de Recomendación
-Diseña y desarrolla un sistema de recomendación basado en los datos recopilados.
-
-**Modelos recomendados:**
-- **Modelo colaborativo:** Basado en las preferencias de los usuarios.
-- **Modelo basado en contenido:** Considerando géneros, directores y calificaciones.
-
-El sistema debe permitir sugerir películas personalizadas para diferentes tipos de usuarios.
-
----
-
-### Fase 5: Creación de una Base de Datos
-Organiza toda la información recopilada en una base de datos SQL bien estructurada. Define las tablas y relaciones necesarias para almacenar los datos de manera eficiente.
-
----
-
-### Fase 6: Inserción de Datos en la Base de Datos
-Inserta todos los datos recopilados en la base de datos diseñada.
-
----
-
-### Fase 7: Consultas SQL
-Realiza consultas para responder preguntas específicas, como:
-- ¿Qué géneros han recibido más premios Oscar?
-- ¿Qué género tiene las mejores calificaciones en IMDB?
-- ¿Qué director tiene más películas premiadas?
-- ¿Cuál es la película mejor valorada en IMDB?
-- ¿Qué actor/actriz ha recibido más premios?
+ - Pillar más datos de películas desde la API para aumentar los datos de nuestra muestra y poder enriquecer más el modelo de recomendación.
+ 
+ - Tratar mejor la limpieza y el tratamiento de las duraciones de la películas en su recopilación.
+ 
+ - Implementar la Fase3, terminar la Fase5 y realizar las fases 6 y 7.
